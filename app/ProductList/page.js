@@ -6,7 +6,7 @@ import { MdOutlineDashboardCustomize } from 'react-icons/md';
 import { TbLayoutDashboard } from 'react-icons/tb';
 import { CgSearch } from "react-icons/cg";
 import { IoIosArrowBack, IoIosArrowForward } from "react-icons/io";
-import productlistimg from "@/public/image/itemimage.png";
+import listimg from "@/public/image/itemimage.png";
 import Navbars from '../(component)/dashboardnavbar/Navbars';
 
 const Page = () => {
@@ -103,7 +103,7 @@ const Page = () => {
                   <tr key={index} className="border-t border-gray-700">
                     <td className="py-4 flex items-center">
                       <Image
-                        src={productlistimg}
+                        src={listimg}
                         alt="product"
                         className="w-10 h-10 mr-4 rounded-md"
                       />

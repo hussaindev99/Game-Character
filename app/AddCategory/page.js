@@ -7,7 +7,7 @@ import { TbLayoutDashboard } from 'react-icons/tb';
 import Navbars from '../(component)/dashboardnavbar/Navbars';
 import { IoIosArrowBack, IoIosArrowForward } from 'react-icons/io';
 
-const page = () => {
+const Page = () => { // Renamed 'page' to 'Page'
     const [currentPage, setCurrentPage] = useState(2); // Current page set to 2 based on your image
     const totalPages = 3;
 
@@ -71,7 +71,6 @@ const page = () => {
                                 />
                             </div>
 
-
                             <div className="w-full lg:w-[48%]">
                                 <label className="block mb-2 mt-10 text-white">Category ID</label>
                                 <input
@@ -80,7 +79,6 @@ const page = () => {
                                     placeholder="345123"
                                 />
                             </div>
-
                         </div>
 
                         {/* Sub Category Row */}
@@ -99,7 +97,6 @@ const page = () => {
                             <button className="bg-[#2b2b2b] text-gray-300 px-16 py-3 rounded-full w-full sm:w-auto">Cancel</button>
                             <button className="bg-[#fd4960] hover:bg-[#ff2f4b] text-white px-16 py-3 rounded-full w-full sm:w-auto">Save</button>
                         </div>
-
 
                         <div className="flex justify-between items-center mt-6">
                             <p className="text-sm text-gray-400">Showing 10 entries</p>
@@ -120,7 +117,6 @@ const page = () => {
                                 </button>
                             </div>
                         </div>
-
                     </div>
                 </div>
             </div>
@@ -138,4 +134,4 @@ const page = () => {
     );
 };
 
-export default page;
+export default Page; // Renamed 'page' to 'Page'

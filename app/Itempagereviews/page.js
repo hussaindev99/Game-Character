@@ -6,7 +6,7 @@ import Battlom from '../(component)/battlom/Battlom';
 import Navbar from "../(component)/navbar/Navbar";
 import Footer from "../(component)/footer/Footer";
 import Image from "next/image";
-import Zahirmays from "@/public/image/ZahirMAys.png";
+import ZahirMAys from "@/public/image/ZahirMAys.png";
 import Alecwhitten from "@/public/image/AlecWhitten.png";
 import Kellywilliams from "@/public/image/KellyWilliams.png";
 import { SlDislike } from "react-icons/sl";
@@ -16,7 +16,7 @@ import { IoIosArrowDown } from "react-icons/io";
 const reviews = [
     {
         id: 1,
-        image: Zahirmays,
+        image: ZahirMAys,
         name: "Zahir Mays",
         comment:
             "I recently bought a character from this website, and couldn't be happier! The variety available is amazing with options for every game. The transaction was smooth and secure, and I received my character within minutes. Customer support was also responsive and helpful. I highly recommend this site for anyone looking to enhance their gaming experience!",
