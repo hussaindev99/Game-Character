@@ -6,7 +6,7 @@ import { MdOutlineDashboardCustomize } from 'react-icons/md';
 import { TbLayoutDashboard } from 'react-icons/tb';
 import { CgSearch } from "react-icons/cg";
 import { IoIosArrowBack, IoIosArrowForward } from "react-icons/io";
-import listimg from "@/public/image/itemimage.png";
+import listimg from "../../public/image/itemimage.png"; // Updated import path
 import Navbars from '../(component)/dashboardnavbar/Navbars';
 
 const Page = () => {

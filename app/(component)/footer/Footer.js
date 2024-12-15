@@ -1,11 +1,6 @@
 import Image from 'next/image';
 import React from 'react';
 import { FaFacebookF, FaInstagram, FaLinkedinIn, FaYoutube, FaTiktok } from 'react-icons/fa';
-import visa from '@/public/image/visa-logo.png'
-import paypal from '@/public/image/PayPal.png'
-import payment from '@/public/image/Mastercard.png'
-import logos from '@/public/image/logo.png'
-
 
 const Footer = () => {
   return (
@@ -17,10 +12,10 @@ const Footer = () => {
           {/* Logo and Description */}
           <div className="md:col-span-1">
             <p className="text-lg font-bold mb-4">
-              <Image src={logos} alt='logo'/>
-              </p>
+              <Image src="/image/logo.png" alt="logo" width={100} height={40} />
+            </p>
             <p className="text-sm mb-4 w-[78%]">
-              On 1 ceases makes it is easy to create, sell, market, and scale your online business with your personal brand.
+              On 1 ceases makes it easy to create, sell, market, and scale your online business with your personal brand.
             </p>
             <div className="flex space-x-4 text-gray-400 mt-4">
               <FaFacebookF className="hover:text-white cursor-pointer" />
@@ -33,7 +28,6 @@ const Footer = () => {
 
           {/* Links Sections */}
           <div className="grid grid-cols-2 md:grid-cols-3 gap-8 md:col-span-2">
-
             {/* Product Links */}
             <div>
               <h3 className="font-semibold mb-4">Product</h3>
@@ -95,9 +89,15 @@ const Footer = () => {
         <div className="flex flex-col md:flex-row items-center justify-between mt-8">
           <p className="text-xs text-gray-500">&copy; FRONXSOLUTION {"–"} All Rights Reserved © 2024</p>
           <div className="flex space-x-4 mt-4 md:mt-0">
-            <button className="bg-gray-800 hover:bg-[#292828] hover:outline-2 hover:outline-[#a09e9e] hover:outline p-2 rounded text-xs outline-2 outline-[#7a7979] outline"><Image src={visa} alt='visa'/></button>
-            <button className="bg-gray-800 hover:bg-[#292828] hover:outline-2 hover:outline-[#a09e9e] hover:outline p-2 rounded text-xs outline-2 outline-[#7a7979] outline"><Image src={paypal} alt='paypal'/></button>
-            <button className="bg-gray-800 hover:bg-[#292828] hover:outline-2 hover:outline-[#a09e9e] hover:outline p-2 rounded text-xs outline-2 outline-[#7a7979] outline"><Image src={payment} alt='payment'/></button>
+            <button className="bg-gray-800 hover:bg-[#292828] hover:outline-2 hover:outline-[#a09e9e] hover:outline py-1 px-2 rounded text-xs outline-2 outline-[#7a7979] outline">
+              <Image src="/image/visa-logo.png" alt="visa" width={20} height={10} />
+            </button>
+            <button className="bg-gray-800 hover:bg-[#292828] hover:outline-2 hover:outline-[#a09e9e] hover:outline py-1 px-2 rounded text-xs outline-2 outline-[#7a7979] outline">
+              <Image src="/image/PayPal.png" alt="paypal" width={20} height={10} />
+            </button>
+            <button className="bg-gray-800 hover:bg-[#292828] hover:outline-2 hover:outline-[#a09e9e] hover:outline py-1 px-2 rounded text-xs outline-2 outline-[#7a7979] outline">
+              <Image src="/image/Mastercard.png" alt="payment" width={20} height={10} />
+            </button>
           </div>
         </div>
       </div>
