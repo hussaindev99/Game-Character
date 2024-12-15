@@ -6,7 +6,7 @@ import Battlom from '../(component)/battlom/Battlom';
 import Navbar from "../(component)/navbar/Navbar";
 import Footer from "../(component)/footer/Footer";
 import Image from "next/image";
-import ZahirMAys from "../../public/image/zahirmays.png";
+// import ZahirMAys from "../../public/image/zahirmays.png";
 import Alecwhitten from "../../public/image/AlecWhitten.png";
 import Kellywilliams from "../../public/image/KellyWilliams.png";// Updated path
 import { SlDislike } from "react-icons/sl";
@@ -16,7 +16,7 @@ import { IoIosArrowDown } from "react-icons/io";
 const reviews = [
     {
         id: 1,
-        image: ZahirMAys,
+        // image: ZahirMAys,
         name: "Zahir Mays",
         comment:
             "I recently bought a character from this website, and couldn't be happier! The variety available is amazing with options for every game. The transaction was smooth and secure, and I received my character within minutes. Customer support was also responsive and helpful. I highly recommend this site for anyone looking to enhance their gaming experience!",
@@ -186,11 +186,11 @@ const ReviewPage = () => {
                                         <div className="flex items-center mb-2">
                                             {/* Image Component with alt text */}
                                             <Image
-                                                src={image}
-                                                alt={`Profile picture of ${name}`} // Adding alt text for accessibility
-                                                width={50}  // You can adjust width and height as needed
+                                                src="/image/zahirmays.png" // Path relative to the public folder
+                                                alt="Zahir Mays Profile Picture"
+                                                width={50}
                                                 height={50}
-                                                className="rounded-full" // Optional: adds circular effect
+                                                className="rounded-full"
                                             />
                                             <div className="ml-4 items-center">
                                                 <h3 className="font-bold">{name}</h3>
