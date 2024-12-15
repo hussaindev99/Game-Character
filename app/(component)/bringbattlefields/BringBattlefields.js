@@ -6,7 +6,7 @@ const BringBattlefields = () => {
     return(
         <>
         
-        <section className="bg-gradient-to-r from-gray-900 via-black to-[#912a2a34] relative mt-[4%] flex flex-col items-center justify-center min-h-screen  text-white text-center p-6">
+        <section className="bg-gradient-to-r mt-24 from-gray-900 via-black to-[#912a2a34] relative  flex flex-col items-center justify-center min-h-screen  text-white text-center p-6">
                 {/* Heading Section */}
                 <div className="">
                     <h1 className="text-6xl w-full font-semibold">

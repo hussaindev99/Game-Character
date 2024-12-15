@@ -10,16 +10,13 @@ import Navbar from "../(component)/navbar/Navbar";
 import Footer from "../(component)/footer/Footer";
 
 export default function Page() {
-
     const [quantity, setQuantity] = useState(1); // Default quantity
     const [isWishlisted, setIsWishlisted] = useState(false); // Wishlist state
     const [cart, setCart] = useState([]); // Cart state
     const [activeTab, setActiveTab] = useState("description");
 
-    
     const product = {
-        
-        title: "Chaos Battltom",
+        title: "Chaos Battltome",
         description:
             "Step into the chaotic realms where every decision shapes your fate. Command powerful armies and unleash devastating tactics to dominate the battlefield. Victory favors the bold in this high-stakes, action-packed strategy game.",
         price: "98.00",
@@ -29,8 +26,6 @@ export default function Page() {
             productImage, // Third image
             product1Image, // Fourth image (main image)
         ],
-
-        
     };
 
     // Handlers
@@ -77,11 +72,11 @@ export default function Page() {
                 {/* Main Content */}
                 <div className="flex flex-col md:flex-row justify-center items-center md:items-start mx-auto px-4 gap-8 max-w-6xl">
                     {/* Left Images */}
-                    <div className="flex flex-col md:flex-col gap-4 justify-center md:justify-start overflow-hidden no-scrollbar">
+                    <div className="flex flex-col gap-4 justify-center md:justify-start overflow-hidden no-scrollbar">
                         {product.images.slice(0, 4).map((src, index) => (
                             <div
                                 key={index}
-                                className="w-24 h-24 md:w-28 md:h-28 bg-gray-800 rounded-lg overflow-hidden "
+                                className="w-24 h-24 md:w-28 md:h-28 bg-gray-800 rounded-lg overflow-hidden"
                             >
                                 <Image
                                     src={src}
@@ -95,8 +90,8 @@ export default function Page() {
                     </div>
 
                     {/* Right Main Image */}
-                    <div className="w-full md:w-auto">
-                        <div className="w-full h-64 md:w-[500px] md:h-[500px] bg-gray-800 rounded-lg overflow-hidden mx-auto">
+                    <div className="w-full md:w-[500px] md:h-[500px]">
+                        <div className="w-full h-64 md:h-[500px] bg-gray-800 rounded-lg overflow-hidden mx-auto">
                             <Image
                                 src={product.images[3]} // Use the fourth image as the main image
                                 alt="Main Product Image"
@@ -167,9 +162,6 @@ export default function Page() {
                     </div>
                 </div>
             </div>
-
-
-
 
             <div className="bg-black mx-[4%] text-white p-6 md:p-10 lg:p-16">
                 {/* Tab Buttons */}
@@ -247,7 +239,6 @@ export default function Page() {
                     )}
                 </div>
             </div>
-
 
             <PopularProduct />
 

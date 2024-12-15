@@ -3,13 +3,13 @@ import React from "react";
 const Page = () => {
   return (
     <div className="flex items-center justify-center min-h-screen bg-black">
-      <div className="bg-[#1b1b1b] rounded-lg shadow-lg p-8 mx-[25%] w-full">
+      <div className="bg-[#1b1b1b] rounded-lg shadow-lg p-8 mx-4 sm:mx-[10%] md:mx-[25%] w-full">
         {/* Heading */}
         <h1 className="text-white text-2xl font-bold text-center mb-2">
           Reset <span className="bg-gradient-to-r from-pink-500 to-blue-500 bg-clip-text text-transparent">Password</span>
         </h1>
         <p className="text-gray-400 text-center mb-6">
-          {"We’ll send you an email so you can reset your password"}
+          We’ll send you an email so you can reset your password
         </p>
 
         {/* Form */}
@@ -25,7 +25,7 @@ const Page = () => {
           </div>
 
           {/* Reset Password Button */}
-          <button className="w-full bg-[#fd4960] hover:bg-[#ff2442]  text-white py-3 rounded-lg transition duration-300">
+          <button className="w-full bg-[#fd4960] hover:bg-[#ff2442] text-white py-3 rounded-lg transition duration-300">
             Reset Password
           </button>
         </form>

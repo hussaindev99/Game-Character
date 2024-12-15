@@ -25,9 +25,9 @@ const page = () => {
     return (
         <>
             <Navbars />
-            <div className='flex'>
+            <div className='flex flex-col lg:flex-row'>
                 {/* Sidebar */}
-                <div className="bg-[#1b1b1b] w-1/5 p-8">
+                <div className="bg-[#1b1b1b] w-full lg:w-1/5 p-8">
                     <ul className="space-y-4">
                         <Link href="/Dashboard" className="flex items-center text-lg hover:bg-[#2b2b2b] p-1 rounded-md">
                             <li className="flex items-center text-lg hover:bg-[#2b2b2b] p-1 rounded-md">
@@ -67,28 +67,26 @@ const page = () => {
                     <div className='flex justify-between'>
                         <h2 className="text-2xl font-semibold mb-4">
                             All <span className='text-[#e3257c]'>Order List</span>
-
                         </h2>
                         <Link href="/Orderdetail" className="bg-[#fd4960] hover:bg-[#ff2f4b] px-12 py-2 flex items-center rounded-full">
-                        Order Detail
+                            Order Detail
                         </Link>
                     </div>
                     {/* Search and Add Order */}
                     <div className="flex justify-between mb-4">
-                        <div className="relative">
+                        <div className="relative w-full sm:w-80 md:w-96">
                             <input
                                 type="text"
                                 placeholder="Search order"
-                                className="bg-[#2b2b2b] text-white rounded-full px-3 py-2 pl-10 w-64 focus:outline-none"
+                                className="bg-[#2b2b2b] text-white rounded-full px-3 py-2 pl-10 w-full focus:outline-none"
                             />
                             <CgSearch className="absolute h-4 w-4 left-3 top-3 text-gray-400" />
                         </div>
-
                     </div>
 
                     {/* Orders Table */}
                     <div className="bg-[#1b1b1b] p-4 rounded-lg flex-grow">
-                        <table className="w-full ">
+                        <table className="w-full">
                             <thead className="border-b text-left border-[#2b2b2b] text-gray-400">
                                 <tr>
                                     <th className="py-2">Order ID</th>

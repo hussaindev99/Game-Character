@@ -17,10 +17,10 @@ const Page = () => {
 
   return (
     <>
-    <Navbars />
-      <div className="flex min-h-screen bg-[#121212] text-white">
+      <Navbars />
+      <div className="flex flex-col sm:flex-row min-h-screen bg-[#121212] text-white">
         {/* Sidebar */}
-        <div className="bg-[#1b1b1b] w-1/5 p-6">
+        <div className="bg-[#1b1b1b] w-full sm:w-1/5 p-6">
           <ul className="space-y-4">
             <li>
               <Link href="/Dashboard" className="flex items-center text-lg hover:bg-[#2b2b2b] p-1 rounded-md">
@@ -62,12 +62,12 @@ const Page = () => {
         </div>
 
         {/* Main Content */}
-        <div className="w-4/5 p-8 flex flex-col rounded-2xl">
-          <div className="flex justify-between mb-5">
+        <div className="w-full sm:w-4/5 p-8 flex flex-col rounded-2xl">
+          <div className="flex justify-between mb-5 flex-wrap">
             <h2 className="text-2xl font-semibold">
               Product <span className="text-[#e3257c]">Categories</span>
             </h2>
-            <Link href="/AddCategory" className="bg-[#fd4960] hover:bg-[#ff2f4b] px-6 py-2 rounded-full">
+            <Link href="/AddCategory" className="bg-[#fd4960] hover:bg-[#ff2f4b] px-6 py-2 rounded-full mt-2 sm:mt-0">
               Add Category
             </Link>
           </div>
@@ -78,7 +78,7 @@ const Page = () => {
               <input
                 type="text"
                 placeholder="Search product"
-                className="bg-[#2b2b2b] text-white rounded-full px-3 py-2 pl-10 w-64 focus:outline-none"
+                className="bg-[#2b2b2b] text-white rounded-full px-3 py-2 pl-10 w-full sm:w-64 focus:outline-none"
               />
               <CgSearch className="absolute h-4 w-4 left-3 top-3 text-gray-400" />
             </div>
@@ -109,9 +109,9 @@ const Page = () => {
           </div>
 
           {/* Pagination */}
-          <div className="flex justify-between items-center mt-6">
+          <div className="flex justify-between items-center mt-6 flex-wrap">
             <p className="text-sm text-gray-400">Showing 10 entries</p>
-            <div className="flex items-center space-x-2">
+            <div className="flex items-center space-x-2 mt-2 sm:mt-0">
               <button className="px-2 py-2 rounded-full bg-[#2b2b2b] hover:bg-[#3b3b3b]"><IoIosArrowBack /></button>
               {[1, 2, 3].map((page) => (
                 <button

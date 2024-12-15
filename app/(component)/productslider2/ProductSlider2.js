@@ -5,7 +5,6 @@ import chaosbattletome from "@/public/image/ChaosBattletome.png";
 import Image from "next/image";
 import { FaShippingFast, FaHeadset, FaRedoAlt } from "react-icons/fa";
 
-
 const products = [
   {
     id: 1,
@@ -54,7 +53,8 @@ const products = [
     title: "Chaos Battletome",
     price: "$98.00",
     Image: chaosbattletome,
-  },  {
+  },
+  {
     id: 1,
     title: "Chaos Battletome",
     price: "$98.00",
@@ -117,94 +117,80 @@ const ProductSlider = () => {
       description: "Friendly 24/7 customer support",
     },
     {
-
       icon: <FaRedoAlt size={30} />,
       title: "MONEY BACK GUARANTEE",
       description: "We return money within 30 days",
     },
   ];
 
-  
-
-
-
   return (
     <>
-    
-    <div className="flex items-center justify-center py-10">
-      {/* Previous Button */}
-      <button
-        onClick={handlePrev}
-        disabled={isPrevDisabled}
-        className={`text-white p-2 ${isPrevDisabled ? "cursor-not-allowed opacity-50" : ""}`}
-      >
-        <AiOutlineLeft size={24} />
-      </button>
-
-      {/* Product Cards Slider */}
-      <div className="w-full max-w-6xl overflow-hidden">
-        <div
-          className="flex transition-transform ease-out duration-500"
-          style={{ transform: `translateX(-${currentIndex * 100}%)` }}
+      <div className="flex items-center justify-center py-10">
+        {/* Previous Button */}
+        <button
+          onClick={handlePrev}
+          disabled={isPrevDisabled}
+          className={`text-white p-2 ${isPrevDisabled ? "cursor-not-allowed opacity-50" : ""}`}
         >
-          {products.map((product, index) => (
-            <div key={index} className="w-1/4 p-4 flex-shrink-0">
-              <div className="bg-black rounded-lg shadow-lg overflow-hidden">
-                <Image
-                  src={product.Image}
-                  alt={product.title}
-                  className="w-full h-64 object-cover"
-                />
-                <div className="p-4 text-center text-white">
-                  <h2 className="text-lg font-semibold">{product.title}</h2>
-                  <p className="text-gray-400">{product.price}</p>
-                  <button className="mt-4 px-6 py-2 bg-transparent border-2 border-red-500 text-red-500 rounded hover:bg-red-500 hover:text-white">
-                    Add to Cart
-                  </button>
+          <AiOutlineLeft size={24} />
+        </button>
+
+        {/* Product Cards Slider */}
+        <div className="w-full max-w-full md:max-w-6xl overflow-hidden">
+          <div
+            className="flex transition-transform ease-out duration-500"
+            style={{ transform: `translateX(-${currentIndex * 100}%)` }}
+          >
+            {products.map((product, index) => (
+              <div key={index} className="w-3/4 sm:w-1/2 md:w-1/4 p-4 flex-shrink-0">
+                <div className="bg-black rounded-lg shadow-lg overflow-hidden">
+                  <Image
+                    src={product.Image}
+                    alt={product.title}
+                    className="w-full h-64 object-cover"
+                  />
+                  <div className="p-4 text-center text-white">
+                    <h2 className="text-lg sm:text-xl md:text-2xl font-semibold">{product.title}</h2>
+                    <p className="text-gray-400 text-sm sm:text-base">{product.price}</p>
+                    <button className="mt-4 px-6 py-2 bg-transparent border-2 border-red-500 text-red-500 rounded hover:bg-red-500 hover:text-white">
+                      Add to Cart
+                    </button>
+                  </div>
                 </div>
               </div>
+            ))}
+          </div>
+        </div>
+
+        {/* Next Button */}
+        <button
+          onClick={handleNext}
+          disabled={isNextDisabled}
+          className={`text-white p-2 ${isNextDisabled ? "cursor-not-allowed opacity-50" : ""}`}
+        >
+          <AiOutlineRight size={24} />
+        </button>
+      </div>
+
+      {/* Features Section */}
+      <div className="py-10">
+        <div className="max-w-5xl mx-auto flex flex-col sm:flex-row items-center justify-between">
+          {features.map((feature, index) => (
+            <div key={index} className="flex flex-col items-center text-white mb-8 sm:mb-0">
+              {/* Icon */}
+              <div className="bg-gray-900 p-2 rounded-full mb-4">
+                <div className="bg-black p-3 rounded-full">
+                  {feature.icon}
+                </div>
+              </div>
+              {/* Title */}
+              <h3 className="text-lg sm:text-xl font-semibold">{feature.title}</h3>
+              {/* Description */}
+              <p className="text-gray-400 text-sm sm:text-base">{feature.description}</p>
             </div>
           ))}
         </div>
       </div>
-
-      {/* Next Button */}
-      <button
-        onClick={handleNext}
-        disabled={isNextDisabled}
-        className={`text-white p-2 ${isNextDisabled ? "cursor-not-allowed opacity-50" : ""}`}
-        >
-        <AiOutlineRight size={24} />
-      </button>
-          </div>
-
-
-
-
-  
-    <div className=" py-10">
-      <div className="max-w-5xl mx-auto flex flex-col md:flex-row items-center justify-between">
-        {features.map((feature, index) => (
-          <div
-            key={index}
-            className="flex flex-col items-center text-white mb-8 md:mb-0"
-          >
-            {/* Icon */}
-            <div className="bg-gray-900 p-2 rounded-full mb-4">
-            <div className="bg-black p-3 rounded-full ">
-              {feature.icon}
-            </div>
-            </div>
-            {/* Title */}
-            <h3 className="text-lg font-semibold">{feature.title}</h3>
-            {/* Description */}
-            <p className="text-gray-400 text-sm">{feature.description}</p>
-          </div>
-        ))}
-      </div>
-    </div>
-  
-
     </>
   );
 };

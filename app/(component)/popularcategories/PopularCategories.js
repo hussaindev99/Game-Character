@@ -1,6 +1,6 @@
 "use client";
 // components/CategoriesSlider.js
-import { useState } from 'react';
+import { useState, useEffect } from 'react';
 import { FaChevronLeft, FaChevronRight } from 'react-icons/fa';
 import Image from 'next/image';
 import heroImage from '@/public/image/image.png';
@@ -45,7 +45,24 @@ const categories = [
 
 export default function CategoriesSlider() {
     const [currentIndex, setCurrentIndex] = useState(0);
-    const visibleCards = 4;
+    const [visibleCards, setVisibleCards] = useState(4);
+
+    // Adjust the number of visible cards based on screen size
+    useEffect(() => {
+        const updateVisibleCards = () => {
+            if (window.innerWidth < 640) {
+                setVisibleCards(1); // Show 1 card on mobile
+            } else if (window.innerWidth < 1024) {
+                setVisibleCards(2); // Show 2 cards on tablets
+            } else {
+                setVisibleCards(4); // Show 4 cards on larger screens
+            }
+        };
+
+        updateVisibleCards();
+        window.addEventListener('resize', updateVisibleCards);
+        return () => window.removeEventListener('resize', updateVisibleCards);
+    }, []);
 
     const handleNext = () => {
         if (currentIndex < categories.length - visibleCards) {
@@ -63,7 +80,7 @@ export default function CategoriesSlider() {
         <div className="w-full bg-[#0A0A0A] text-white py-10">
             <div className="max-w-6xl mx-auto px-4">
                 <h2 className="text-2xl font-bold mb-8">
-                    Popular <span className="font-semibold text-transparent bg-clip-text bg-gradient-to-r from-pink-500 to-blue-500 ">Categories</span>
+                    Popular <span className="font-semibold text-transparent bg-clip-text bg-gradient-to-r from-pink-500 to-blue-500">Categories</span>
                 </h2>
                 <div className="relative flex items-center">
                     {/* Left Arrow */}
@@ -79,12 +96,13 @@ export default function CategoriesSlider() {
                     <div className="w-full overflow-hidden">
                         <div
                             className="flex transition-transform duration-500 ease-out"
-                            style={{ transform: `translateX(-${currentIndex * 25}%)` }}
+                            style={{ transform: `translateX(-${currentIndex * (100 / visibleCards)}%)` }}
                         >
                             {categories.map((category, index) => (
                                 <div
                                     key={index}
-                                    className="w-1/4 flex-shrink-0 p-2"
+                                    className={`flex-shrink-0 p-2`}
+                                    style={{ width: `${100 / visibleCards}%` }}
                                 >
                                     <div className="bg-[#1B1B1B] rounded-lg overflow-hidden shadow-lg">
                                         {/* Display the Image */}

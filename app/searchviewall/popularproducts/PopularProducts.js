@@ -31,8 +31,8 @@ const PopularProduct = () => {
     return (
         <div>
             <div className="mx-[9%]">
-                <h2 className="text-2xl font-bold mb-2  ">
-                    Popular <span className="font-semibold text-transparent bg-clip-text bg-gradient-to-r from-pink-500 to-blue-500 ">Products</span>
+                <h2 className="text-2xl font-bold mb-2">
+                    Popular <span className="font-semibold text-transparent bg-clip-text bg-gradient-to-r from-pink-500 to-blue-500">Products</span>
                 </h2>
                 <p className="text-sm mt-0 pt-0">Detailed, Handcrafted Figures at Affordable Prices</p>
             </div>
@@ -41,11 +41,11 @@ const PopularProduct = () => {
                 <button
                     onClick={handlePrev}
                     disabled={currentIndex === 0}
-                    className={`text-white p-2 ${currentIndex === 0 ? "cursor-not-allowed opacity-50" : ""
-                        }`}
+                    className={`text-white p-2 ${currentIndex === 0 ? "cursor-not-allowed opacity-50" : ""}`}
                 >
                     <AiOutlineLeft size={24} />
                 </button>
+
                 {/* Product Cards Slider */}
                 <div className="w-full max-w-6xl overflow-hidden">
                     <div
@@ -53,14 +53,14 @@ const PopularProduct = () => {
                         style={{ transform: `translateX(-${currentIndex * 25}%)` }}
                     >
                         {products.map((product, index) => (
-                            <div key={index} className="w-1/4 p-4 flex-shrink-0">
+                            <div key={index} className="w-1/4 p-4 flex-shrink-0 md:w-1/4 sm:w-1/2 xs:w-full">
                                 <div className="bg-[#1B1B1B] rounded-lg shadow-lg">
                                     {/* Product Image */}
                                     <div className="relative h-64 w-full">
                                         <Image
                                             src={product.Image}
                                             alt={product.title}
-                                            className="w-full h-full object-cover p-4 rounded-3xl   "
+                                            className="w-full h-full object-cover p-4 rounded-3xl"
                                         />
                                     </div>
                                     {/* Product Details */}
@@ -85,10 +85,7 @@ const PopularProduct = () => {
                 <button
                     onClick={handleNext}
                     disabled={currentIndex === products.length - 4}
-                    className={`text-white p-2 ${currentIndex === products.length - 4
-                        ? "cursor-not-allowed opacity-50"
-                        : ""
-                        }`}
+                    className={`text-white p-2 ${currentIndex === products.length - 4 ? "cursor-not-allowed opacity-50" : ""}`}
                 >
                     <AiOutlineRight size={24} />
                 </button>

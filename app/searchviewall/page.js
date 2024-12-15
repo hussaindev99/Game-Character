@@ -1,6 +1,5 @@
 import React from "react";
 import Sidebar from "./slidebar/Sidebar";
-import Header from "./header/Header";
 import PopularProduct from "./popularproducts/PopularProducts";
 import Navbar from "../(component)/navbar/Navbar";
 import Footer from "../(component)/footer/Footer";

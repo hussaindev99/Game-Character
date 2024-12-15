@@ -22,9 +22,9 @@ export default function Sidebar() {
     };
 
     return (
-        <div className="flex ">
-
-            <div className="mt-12 left-0 top-0 h-screen w-60 bg-black text-white p-4 overflow-y-auto">
+        <div className="flex flex-col md:flex-row mt-16">
+            {/* Sidebar */}
+            <div className="mt-12 left-0 top-0 w-full md:w-60 bg-black text-white p-4 overflow-y-auto">
                 {/* Categories Section */}
                 <div className="mb-6">
                     <div
@@ -112,33 +112,33 @@ export default function Sidebar() {
                                                 }}
                                             />
                                             <style jsx>{`
-    input[type='range']::-webkit-slider-thumb {
-      -webkit-appearance: none;
-      appearance: none;
-      height: 20px;
-      width: 20px;
-      border-radius: 50%;
-      background-color: #FD4960;
-      box-shadow: 0 0 6px rgba(0, 0, 0, 0.1);
-      cursor: pointer;
-      border: 2px solid white;
-    }
+                                                input[type='range']::-webkit-slider-thumb {
+                                                    -webkit-appearance: none;
+                                                    appearance: none;
+                                                    height: 20px;
+                                                    width: 20px;
+                                                    border-radius: 50%;
+                                                    background-color: #FD4960;
+                                                    box-shadow: 0 0 6px rgba(0, 0, 0, 0.1);
+                                                    cursor: pointer;
+                                                    border: 2px solid white;
+                                                }
 
-    input[type='range']::-moz-range-thumb {
-      height: 20px;
-      width: 20px;
-      border-radius: 50%;
-      background-color: #FD4960;
-      box-shadow: 0 0 6px rgba(0, 0, 0, 0.1);
-      cursor: pointer;
-      border: 2px solid white;
-    }
+                                                input[type='range']::-moz-range-thumb {
+                                                    height: 20px;
+                                                    width: 20px;
+                                                    border-radius: 50%;
+                                                    background-color: #FD4960;
+                                                    box-shadow: 0 0 6px rgba(0, 0, 0, 0.1);
+                                                    cursor: pointer;
+                                                    border: 2px solid white;
+                                                }
 
-    input[type='range']::-webkit-slider-runnable-track {
-      height: 8px;
-      border-radius: 10px;
-    }
-  `}</style>
+                                                input[type='range']::-webkit-slider-runnable-track {
+                                                    height: 8px;
+                                                    border-radius: 10px;
+                                                }
+                                            `}</style>
                                         </div>
 
                                         <div className="mt-4">
@@ -156,7 +156,10 @@ export default function Sidebar() {
                 </div>
             </div>
 
-            <Header />
+            {/* Main Content */}
+            <div className="flex-1">
+                <Header />
+            </div>
         </div>
     );
 }

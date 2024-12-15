@@ -9,7 +9,7 @@ import Navbar from "../(component)/navbar/Navbar";
 export default function page() {
     return (
         <>
-        <Navbar />
+            <Navbar />
             <div className="flex items-center justify-center h-screen bg-black text-white">
                 <div
                     className="flex flex-col md:flex-row items-center justify-between w-full max-w-6xl p-6 rounded-lg shadow-lg relative overflow-hidden"
@@ -24,14 +24,14 @@ export default function page() {
                     ></div>
 
                     {/* Content Section */}
-                    <div className="md:w-1/2 p-6 relative z-10">
-                        <button className=" text-white px-4 py-2 rounded mb-4" style={{
+                    <div className="md:w-1/2 p-6 relative z-10 text-center  md:text-left">
+                        <button className="text-white px-4 py-2 rounded mb-4" style={{
                             background:
                                 "linear-gradient(135deg, rgba(255,0,150,0.8), rgba(0,0,255,0.7))",
                         }}>
                             What About Us
                         </button>
-                        <h2 className="text-3xl font-semibold mb-4 leading-tight">
+                        <h2 className="text-3xl md:text-4xl font-semibold mb-4 leading-tight">
                             Unleash Creativity with{" "}
                             <span
                                 style={{
@@ -45,7 +45,6 @@ export default function page() {
                             </span>
                         </h2>
 
-
                         <p className="text-lg text-gray-300 mb-6">
                             Our platform is your ultimate destination for downloading premium
                             game characters. Designed for gamers and developers alike, we bring
@@ -56,23 +55,22 @@ export default function page() {
                         </p>
                         <a
                             href="#"
-                            className=" bg-[#FD4960] text-white px-7 py-3 rounded-3xl hover:bg-[#c03044] transition duration-200"
-
+                            className="bg-[#FD4960] text-white px-7 py-3 rounded-3xl hover:bg-[#c03044] transition duration-200"
                         >
                             Explore Characters
                         </a>
                     </div>
 
                     {/* Image Section */}
-                    <div className="md:w-1/2 flex items-center justify-center relative z-10">
+                    <div className="md:w-1/2 flex items-center justify-center relative z-10 mt-6 md:mt-0">
                         <Image
                             src={gamecharacter}
                             alt="Gaming Character"
-                            className="rounded-lg shadow-lg"
+                            className="rounded-lg shadow-lg w-full md:w-auto"
                         />
                     </div>
                 </div>
-            </div >
+            </div>
 
             <Feature />
             <ProcessWork />

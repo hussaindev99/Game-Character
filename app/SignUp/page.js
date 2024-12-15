@@ -9,8 +9,8 @@ const Page = () => {
   return (
     <>
       <Navbar />
-      <div className="flex rounded-lg bg-[#1b1b1b] items-center mt-14 mx-[20%] justify-center min-h-screen  px-4">
-        <div className="p-8 rounded-xl w-full shadow-lg">
+      <div className="flex mt-24 mb-10 rounded-lg bg-[#1b1b1b] items-center  px-4 justify-center min-h-screen sm:mx-8 md:mx-16 lg:mx-[20%]">
+        <div className="p-8 rounded-xl w-full max-w-md sm:max-w-lg shadow-lg">
           <h1 className="text-white text-2xl font-bold text-center mb-2">
             Welcome to{" "}
             <span className="bg-gradient-to-r from-pink-500 to-blue-500 bg-clip-text text-transparent">
@@ -53,7 +53,7 @@ const Page = () => {
             </div>
 
             {/* Sign Up Button */}
-            <button className="w-full  bg-[#fd4960] hover:bg-[#ff2442]  text-white py-3 rounded-full transition duration-300">
+            <button className="w-full bg-[#fd4960] hover:bg-[#ff2442] text-white py-3 rounded-full transition duration-300">
               Sign Up
             </button>
           </form>
@@ -66,12 +66,12 @@ const Page = () => {
           </div>
 
           {/* Social Login Buttons */}
-          <div className="flex space-x-4">
-            <button className="flex-1 cursor-not-allowed bg-[#2b2b2b] hover:bg-[#3b3b3b] text-white py-3 rounded-full flex items-center justify-center transition duration-300">
+          <div className="flex flex-wrap gap-4">
+            <button className="flex-1 bg-[#2b2b2b] cursor-not-allowed hover:bg-[#3b3b3b] text-white py-3 rounded-full flex items-center justify-center transition duration-300">
               <RiFacebookCircleFill className="mr-2 h-5 w-5 text-blue-700" />{" "}
               Continue with Facebook
             </button>
-            <button className="flex-1 cursor-not-allowed  bg-[#2b2b2b] hover:bg-[#3b3b3b] text-white py-3 rounded-full flex items-center justify-center transition duration-300">
+            <button className="flex-1 bg-[#2b2b2b] cursor-not-allowed hover:bg-[#3b3b3b] text-white py-3 rounded-full flex items-center justify-center transition duration-300">
               <Image src={googleicon} alt="Google" width={20} height={20} />
               <span className="ml-2">Continue with Google</span>
             </button>

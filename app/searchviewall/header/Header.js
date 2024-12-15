@@ -39,12 +39,12 @@ export default function Header() {
   };
 
   return (
-    <div className="w-full">
+    <div className="w-full mt-16">
       {/* Header Section */}
       <div className="mt-10 w-full bg-black p-4">
         {/* Search Input */}
-        <div className="flex items-center justify-between">
-          <div className="flex items-center w-full max-w-3xl">
+        <div className="flex flex-col md:flex-row items-center justify-between">
+          <div className="flex items-center w-full max-w-3xl mb-4 md:mb-0">
             <CiSearch className="text-lg p-2 w-auto h-[48px] rounded-l-full bg-gray-800 text-white outline-none focus:ring-2 focus:ring-pink-500 transition-all" />
             <input
               type="text"
@@ -62,7 +62,7 @@ export default function Header() {
           </div>
 
           {/* Dropdown Menu */}
-          <div className="relative ml-4" ref={dropdownRef}>
+          <div className="relative ml-4">
             <button
               onClick={toggleDropdown}
               className="flex items-center px-4 py-3 bg-gray-800 text-white text-sm rounded-full outline-none hover:bg-gray-700 transition-all"

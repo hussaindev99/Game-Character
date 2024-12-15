@@ -56,9 +56,9 @@ const ShoppingCart = () => {
         <div className="min-h-screen bg-black text-white p-8 mt-7">
             <div className="max-w-7xl mx-auto">
                 {/* Back Button */}
-                <button className="mb-6 text-sm flex my-5 items-center">
-                    <span className="mr-2"><FaArrowLeft /></span>
-                    Back
+                <button className="mb-6 text-sm flex items-center space-x-2">
+                    <FaArrowLeft />
+                    <span>Back</span>
                 </button>
 
                 {/* Main Container */}
@@ -81,8 +81,8 @@ const ShoppingCart = () => {
                                         className="rounded"
                                     />
                                     <div className="ml-4">
-                                        <h2 className="font-semibold">{item.name}</h2>
-                                        <p className="text-gray-400 text-sm">Lorem ipsum</p>
+                                        <h2 className="font-semibold text-sm sm:text-base">{item.name}</h2>
+                                        <p className="text-gray-400 text-xs sm:text-sm">Lorem ipsum</p>
                                     </div>
                                 </div>
                                 {/* Price & Quantity */}
@@ -201,3 +201,10 @@ const ShoppingCart = () => {
 };
 
 export default ShoppingCart;
+
+
+
+
+
+
+

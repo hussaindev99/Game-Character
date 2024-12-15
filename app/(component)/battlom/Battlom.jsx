@@ -7,27 +7,21 @@ import product1Image from "@/public/image/product1.png";
 import bgimg from "@/public/image/ChaosBattltom.png";
 
 export default function Page() {
-
     const [quantity, setQuantity] = useState(1); // Default quantity
     const [isWishlisted, setIsWishlisted] = useState(false); // Wishlist state
     const [cart, setCart] = useState([]); // Cart state
-    const [activeTab, setActiveTab] = useState("description");
 
-    
     const product = {
-        
-        title: "Chaos Battltom",
+        title: "Chaos Battletome",
         description:
             "Step into the chaotic realms where every decision shapes your fate. Command powerful armies and unleash devastating tactics to dominate the battlefield. Victory favors the bold in this high-stakes, action-packed strategy game.",
         price: "98.00",
         images: [
-            productImage, // First image
-            productImage, // Second image
-            productImage, // Third image
+            productImage,
+            productImage,
+            productImage,
             product1Image, // Fourth image (main image)
         ],
-
-        
     };
 
     // Handlers
@@ -50,34 +44,34 @@ export default function Page() {
 
     return (
         <div className="bg-black">
+            {/* Hero Section */}
             <div className="mt-14">
                 <div
                     className="relative bg-cover bg-center bg-no-repeat text-white py-24 px-6"
                     style={{
-                        backgroundImage: `url(${bgimg.src})`, // Background Image
+                        backgroundImage: `url(${bgimg.src})`,
                     }}
                 >
-                    {/* Heading */}
                     <h1 className="text-4xl md:text-6xl font-bold text-center uppercase tracking-wide">
                         Chaos Battletome
                     </h1>
                 </div>
             </div>
 
+            {/* Main Content */}
             <div className="min-h-screen bg-black text-white flex flex-col">
                 {/* Back Button */}
                 <div className="p-4 mx-4 my-5 md:ml-24">
                     <button className="text-xl font-semibold">&larr; Back</button>
                 </div>
 
-                {/* Main Content */}
                 <div className="flex flex-col md:flex-row justify-center items-center md:items-start mx-auto px-4 gap-8 max-w-6xl">
-                    {/* Left Images */}
-                    <div className="flex flex-col md:flex-col gap-4 justify-center md:justify-start overflow-hidden no-scrollbar">
+                    {/* Thumbnail Images */}
+                    <div className="flex flex-row md:flex-col gap-4 overflow-x-scroll md:overflow-visible no-scrollbar">
                         {product.images.slice(0, 4).map((src, index) => (
                             <div
                                 key={index}
-                                className="w-24 h-24 md:w-28 md:h-28 bg-gray-800 rounded-lg overflow-hidden "
+                                className="w-20 h-20 md:w-28 md:h-28 bg-gray-800 rounded-lg overflow-hidden"
                             >
                                 <Image
                                     src={src}
@@ -90,11 +84,11 @@ export default function Page() {
                         ))}
                     </div>
 
-                    {/* Right Main Image */}
+                    {/* Main Product Image */}
                     <div className="w-full md:w-auto">
                         <div className="w-full h-64 md:w-[500px] md:h-[500px] bg-gray-800 rounded-lg overflow-hidden mx-auto">
                             <Image
-                                src={product.images[3]} // Use the fourth image as the main image
+                                src={product.images[3]}
                                 alt="Main Product Image"
                                 width={500}
                                 height={500}
@@ -105,13 +99,14 @@ export default function Page() {
 
                     {/* Product Details */}
                     <div className="max-w-md mx-auto mt-10 text-center md:text-left">
-                        <h1 className="text-4xl font-bold mb-4">{product.title}</h1>
-                        <p className="text-gray-300 mb-6 mt-10">{product.description}</p>
+                        <h1 className="text-3xl md:text-4xl font-bold mb-4">{product.title}</h1>
+                        <p className="text-gray-300 mb-6 mt-5 text-sm md:text-base">
+                            {product.description}
+                        </p>
                         <div className="text-2xl font-semibold mb-4">${product.price}</div>
 
-                        {/* Quantity and Actions */}
+                        {/* Quantity and Wishlist */}
                         <div className="flex items-center gap-4 mb-6 justify-center md:justify-start">
-                            {/* Quantity Selector */}
                             <div className="flex items-center border border-gray-600 rounded-md">
                                 <button
                                     onClick={() => handleQuantityChange("decrease")}
@@ -127,8 +122,6 @@ export default function Page() {
                                     +
                                 </button>
                             </div>
-
-                            {/* Wishlist Button */}
                             <button
                                 onClick={handleWishlistToggle}
                                 className={`text-xl border border-gray-600 rounded-full w-10 h-10 flex justify-center items-center ${isWishlisted ? "bg-red-600 text-white" : ""
@@ -139,7 +132,7 @@ export default function Page() {
                             </button>
                         </div>
 
-                        {/* Add to Cart Button */}
+                        {/* Add to Cart */}
                         <button
                             onClick={handleAddToCart}
                             className="flex items-center justify-center gap-2 border border-red-500 text-red-500 text-lg py-3 px-10 rounded-full hover:bg-red-500 hover:text-white transition-colors w-full md:w-auto"
