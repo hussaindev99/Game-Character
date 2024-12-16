@@ -356,7 +356,7 @@ const Dashboard = () => {
                         </span>
                       </td>
                       <td className="py-3 px-4 text-right">
-                        <button className="bg-gray-700 p-2 rounded-full">
+                        <button className="bg-[#1b1b1b] p-2 rounded-full">
                           <i className="fa fa-ellipsis-h text-white">
                             <BsThreeDotsVertical />
                           </i>
