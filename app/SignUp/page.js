@@ -3,7 +3,7 @@ import React, { useEffect, useState } from "react";
 import { RiFacebookCircleFill } from "react-icons/ri";
 import Image from "next/image";
 import googleicon from "@/public/image/google-icon-logo.svg";
-import Navbar from "../(component)/navbar/Navbar";
+import LandingNavbar from "../(component)/landingpagenavbar/LandingNavbar";
 import Link from "next/link";
 import { useRouter } from "next/navigation";
 import axios from "axios";
@@ -78,7 +78,7 @@ const Page = () => {
           </div>
         </div>
       }
-      <Navbar />
+      <LandingNavbar />
       <div className="flex mt-24 mb-10 rounded-lg bg-[#1b1b1b] items-center  px-4 justify-center min-h-screen sm:mx-8 md:mx-16 lg:mx-[20%]">
         <div className="p-8 rounded-xl w-full max-w-md sm:max-w-lg shadow-lg">
           <h1 className="text-white text-2xl font-bold text-center mb-2">
