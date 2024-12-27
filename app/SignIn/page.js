@@ -3,7 +3,7 @@ import React, { useState } from "react";
 import { RiFacebookCircleFill } from "react-icons/ri";
 import Image from "next/image";
 import googleicon from "@/public/image/google-icon-logo.svg";
-import Navbar from "../(component)/navbar/Navbar";
+import LandingNavbar from "../(component)/landingpagenavbar/LandingNavbar";
 import Link from "next/link";
 import { useRouter } from "next/navigation";
 import axios from "axios";
@@ -60,7 +60,7 @@ const Page = () => { // Changed 'page' to 'Page'
 
     return (
         <>
-            <Navbar />
+            <LandingNavbar />
 
             {loader && (
                 <div>
