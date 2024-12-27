@@ -1,7 +1,7 @@
 import Image from 'next/image';
 import React from 'react';
 import { FaFacebookF, FaInstagram, FaLinkedinIn, FaYoutube, FaTiktok } from 'react-icons/fa';
-
+import logo from "@/public/image/Logo.png";
 const Footer = () => {
   return (
     <footer className="mt-20 text-white ">
@@ -13,7 +13,7 @@ const Footer = () => {
             {/* Logo and Description */}
             <div className="md:col-span-1 lg:ml-8">
               <p className="text-lg font-bold mb-4">
-                <Image src="/image/logo.png" alt="logo" width={100} height={40} />
+                <Image src={logo} alt="logo" width={100} height={40} />
               </p>
               <p className="text-sm mb-4 w-[78%]">
                 On 1 ceases makes it easy to create, sell, market, and scale your online business with your personal brand.
