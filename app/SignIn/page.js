@@ -1,4 +1,4 @@
-"use client"
+"use client";
 import React, { useState } from "react";
 import { RiFacebookCircleFill } from "react-icons/ri";
 import Image from "next/image";
@@ -9,14 +9,15 @@ import { useRouter } from "next/navigation";
 import axios from "axios";
 import { toast } from "react-toastify";
 
-const page = () => {
+const Page = () => { // Changed 'page' to 'Page'
     const [email, setEmail] = useState('');
     const [password, setPassword] = useState('');
     const [hasError, setHasError] = useState(false);
     const [error, setError] = useState('');
-    const [loader, setloader] = useState(false)
+    const [loader, setLoader] = useState(false); // Fixed variable name to 'setLoader'
 
     const router = useRouter();
+
     const submit = async (e) => {
         e.preventDefault();
         if (email.length <= 3 || password.length <= 3) {
@@ -26,60 +27,59 @@ const page = () => {
             setEmail('');
             setPassword('');
         } else {
-            setloader(true)
+            setLoader(true); // Fixed variable name to 'setLoader'
 
             try {
                 const res = await axios.post('https://gaming-api-kgvd.vercel.app/user/login', {
-                    email: email,
-                    password: password,
-                })
+                    email,
+                    password,
+                });
 
                 console.log(res.data);
-                localStorage.clear('id');
-                localStorage.setItem('token', res.data?.token)
-                localStorage.setItem('password', password)
-                localStorage.setItem('id', res?.data?._id,)
-                toast.success("login successfuly");
-                router.push('/Home')
+                localStorage.clear();
+                localStorage.setItem('token', res.data?.token);
+                localStorage.setItem('password', password);
+                localStorage.setItem('id', res?.data?._id);
+                toast.success("Login successful!");
+                router.push('/Home');
                 setError('');
                 setEmail('');
                 setPassword('');
                 setHasError(false);
-                setloader(false);
-
-
+                setLoader(false); // Fixed variable name to 'setLoader'
 
             } catch (error) {
                 console.log(error);
-                setloader(false)
+                setLoader(false); // Fixed variable name to 'setLoader'
                 setHasError(true);
                 toast.error(error?.response?.data?.msg);
                 setError(error?.response?.data?.msg);
-
             }
         }
     };
+
     return (
         <>
             <Navbar />
 
-            {loader &&
+            {loader && (
                 <div>
                     <div className="relative w-[100%] h-[4px] rounded-[30px] bg-loader-background">
                         <div className="absolute top-0 left-0 h-full rounded-[30px] bg-loader-color animate-moving" />
                     </div>
                 </div>
-            }
+            )}
             <div className="flex mt-28 mb-10 rounded-lg bg-[#1b1b1b] items-center px-4 justify-center min-h-screen sm:mx-8 md:mx-16 lg:mx-[20%]">
                 <div className="p-8 rounded-xl w-full max-w-lg shadow-lg">
                     <h1 className="text-white text-2xl font-bold text-center mb-2">
                         Welcome Back to <span className="bg-gradient-to-r from-pink-500 to-blue-500 bg-clip-text text-transparent">Company Name</span>
-                    </h1>{!hasError &&
-                    <p className="text-gray-400 text-center mb-6">Sign in to continue to your account.</p>
-                    }
-                    {hasError &&
-                        <p className='text-[16px] mt-[10px] text-red-500'>{error}</p>
-                    }
+                    </h1>
+                    {!hasError && (
+                        <p className="text-gray-400 text-center mb-6">Sign in to continue to your account.</p>
+                    )}
+                    {hasError && (
+                        <p className="text-[16px] mt-[10px] text-red-500">{error}</p>
+                    )}
                     <form className="space-y-4" onSubmit={submit}>
                         <div>
                             <label className="text-gray-400 block mb-2">Email Address</label>
@@ -87,7 +87,10 @@ const page = () => {
                                 type="email"
                                 placeholder="Enter email address"
                                 className="w-full p-3 rounded-lg bg-[#1b1b1b] text-white border border-gray-700 focus:outline-none focus:ring-2 focus:ring-indigo-500"
-                                required onChange={(e) => setEmail(e.target.value)} value={email}/>
+                                required
+                                onChange={(e) => setEmail(e.target.value)}
+                                value={email}
+                            />
                         </div>
 
                         <div>
@@ -96,7 +99,9 @@ const page = () => {
                                 type="password"
                                 placeholder="Enter password"
                                 className="w-full p-3 rounded-lg bg-[#1b1b1b] text-white border border-gray-700 focus:outline-none focus:ring-2 focus:ring-indigo-500"
-                                onChange={(e) => setPassword(e.target.value)} value={password}/>
+                                onChange={(e) => setPassword(e.target.value)}
+                                value={password}
+                            />
                         </div>
 
                         <div className="flex items-center justify-between text-sm">
@@ -145,4 +150,4 @@ const page = () => {
     );
 };
 
-export default page;
+export default Page; // Use the updated name

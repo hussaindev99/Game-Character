@@ -149,7 +149,7 @@ const ReviewPage = () => {
                 <p className="text-2xl font-bold">Total Reviews</p>
                 <p className="text-5xl font-bold">1k</p>
                 <p>Growth on review on this year</p>
-                <button className="flex items-center bg-[#0e281b] py-2 px-3 rounded-full text-[#1EB06A]"><IoMdTrendingUp className="mr-2"/>9.2%</button>
+                <button className="flex items-center bg-[#0e281b] py-1.5 px-3 rounded-full text-[#1EB06A]"><IoMdTrendingUp className="mr-2"/>9.2%</button>
               </div>
             </div>
 
