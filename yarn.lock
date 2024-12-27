@@ -1841,7 +1841,7 @@ natural-compare@^1.4.0:
   resolved "https://registry.npmjs.org/natural-compare/-/natural-compare-1.4.0.tgz"
   integrity sha512-OWND8ei3VtNC9h7V60qff3SVobHr996CTwgxubgyQYEpg290h9J0buyECNNJexkFm5sOajh5G116RYA1c8ZMSw==
 
-next@^14.2.20:
+next@^14.2.20, "next@>= 6.0.0":
   version "14.2.20"
   resolved "https://registry.npmjs.org/next/-/next-14.2.20.tgz"
   integrity sha512-yPvIiWsiyVYqJlSQxwmzMIReXn5HxFNq4+tlVQ812N1FbvhmE+fDpIAD7bcS2mGYQwPJ5vAsQouyme2eKsxaug==
@@ -1864,6 +1864,14 @@ next@^14.2.20:
     "@next/swc-win32-ia32-msvc" "14.2.20"
     "@next/swc-win32-x64-msvc" "14.2.20"
 
+nextjs-toploader@^3.7.15:
+  version "3.7.15"
+  resolved "https://registry.npmjs.org/nextjs-toploader/-/nextjs-toploader-3.7.15.tgz"
+  integrity sha512-DvvXEJVRPfE2j1HVXgFhmPl8pRcLb/4mvyVBDuYdMdkbEY7KJghp0fG5iOZ002cV6awbBw9j/Di7vQL8LRazxQ==
+  dependencies:
+    nprogress "^0.2.0"
+    prop-types "^15.8.1"
+
 normalize-path@^3.0.0, normalize-path@~3.0.0:
   version "3.0.0"
   resolved "https://registry.npmjs.org/normalize-path/-/normalize-path-3.0.0.tgz"
@@ -1877,6 +1885,11 @@ npm-force-resolutions@^0.0.10:
     json-format "^1.0.1"
     source-map-support "^0.5.5"
     xmlhttprequest "^1.8.0"
+
+nprogress@^0.2.0:
+  version "0.2.0"
+  resolved "https://registry.npmjs.org/nprogress/-/nprogress-0.2.0.tgz"
+  integrity sha512-I19aIingLgR1fmhftnbWWO3dXc0hSxqHQHQb3H8m+K3TnEn/iSeTZZOyvKXWqQESMwuUVnatlCnZdLBZZt2VSA==
 
 object-assign@^4.0.1, object-assign@^4.1.1:
   version "4.1.1"
@@ -2144,7 +2157,7 @@ react-chartsjs@^0.1.0:
   resolved "https://registry.npmjs.org/react-chartsjs/-/react-chartsjs-0.1.0.tgz"
   integrity sha512-mBiBP69Mg1Ly6w7TaR/ZLuEuyVCol4qb5ZO2Uz6fv8sr64ICLlWGXkwJ+N6BHFDACc5vDuKFoDYWve/9Ir7sOg==
 
-"react-dom@^18 || ^19", react-dom@^18.2.0:
+"react-dom@^18 || ^19", react-dom@^18.2.0, "react-dom@>= 16.0.0":
   version "18.2.0"
   resolved "https://registry.npmjs.org/react-dom/-/react-dom-18.2.0.tgz"
   integrity sha512-6IMTriUmvsjHUjNtEDudZfuDQUoWXVxKHhlEGSk81n4YFS+r/Kl99wXiwlVXtPBtJenozv2P+hxDsw9eA7Xo6g==
@@ -2169,7 +2182,7 @@ react-toastify@^11.0.2:
   dependencies:
     clsx "^2.1.1"
 
-react@*, "react@^16.8.0 || ^17.0.0 || ^18.0.0", "react@^18 || ^19", react@^18.2.0, "react@>= 16.8.0 || 17.x.x || ^18.0.0-0":
+react@*, "react@^16.8.0 || ^17.0.0 || ^18.0.0", "react@^18 || ^19", react@^18.2.0, "react@>= 16.0.0", "react@>= 16.8.0 || 17.x.x || ^18.0.0-0":
   version "18.2.0"
   resolved "https://registry.npmjs.org/react/-/react-18.2.0.tgz"
   integrity sha512-/3IjMdb2L9QbBdWiW5e3P2/npwMBaU9mHCSCUzNln0ZCYbcfTsGbTJrU/kGemdH2IWmB2ioZ+zkxtmq6g09fGQ==

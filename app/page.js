@@ -12,6 +12,7 @@ import TestimonialSection from "./(component)/testimonialsection/TestimonialSect
 import BringBattlefields from "./(component)/bringbattlefields/BringBattlefields";
 import Navbar from "./(component)/navbar/Navbar";
 import Footer from "./(component)/footer/Footer";
+import LandingNavbar from "./(component)/landingpagenavbar/LandingNavbar";
 
 export default function Home() {
   const router = useRouter(); // Initialize router here
@@ -27,13 +28,13 @@ export default function Home() {
   useEffect(() => {
     const token = localStorage.getItem("token");
     if (!token) {
-      router.push("/SignIn"); // Use `router.push` to navigate
+      router.push("/"); // Use `router.push` to navigate
     }
   }, [router]);
 
   return (
     <div>
-      <Navbar />
+      <LandingNavbar />
       <div data-aos="fade-up">
         <BringBattlefields />
       </div>
