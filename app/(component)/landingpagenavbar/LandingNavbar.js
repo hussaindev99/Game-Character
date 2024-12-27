@@ -89,7 +89,7 @@ const LandingNavbar = () => {
                             </div>
                         </div>
                     </div>
-                    <Link href="/Cart">
+                    <Link href="/SignIn">
                     <div className="flex items-center relative">
                         <IoBagOutline className="w-6 h-6" />
                         <span className="absolute top-1 right-24 bg-yellow-400 text-black text-xs font-bold rounded-full px-1">
@@ -190,7 +190,7 @@ const LandingNavbar = () => {
                         </li>
                         {/* Cart */}
                         <li>
-                            <Link href="/Cart">
+                            <Link href="/SignIn">
                                 <div className="flex items-center space-x-4">
                                     <div className="relative inline-block">
                                         <IoBagOutline className="w-6 h-6" />
